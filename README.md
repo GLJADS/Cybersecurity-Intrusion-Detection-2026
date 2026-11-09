@@ -3,8 +3,9 @@
 Group final project: find the malicious traffic in a PCAP with a data science technique, then write a threat report and present it.
 
 - **Due:** 5 Dec 2026, 23:59 (upload as one zip). **Presentation:** 30 Nov or 1 Dec
-- **Case:** not chosen yet (see `docs/Case and technique.md`)
-- **Technique:** not chosen yet
+- **Case:** Case 1, DNS tunnelling (see `docs/Case and technique.md`)
+- **Technique:** Isolation Forest
+- **Start here:** the newest `docs/handoff-*.md`
 - **Brief and grading criteria:** `assignment/Assignment brief.md`
 
 ## Layout
