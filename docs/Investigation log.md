@@ -10,6 +10,15 @@ Newest first. One entry per finding: what was looked at, how, and what it showed
 - Next:
 -->
 
+## 2026-11-10 12:30 Incident analysis in the notebook, and corrections to earlier entries
+- Looked at: what happened inside the tunnel and how it differs from normal traffic (`notebooks/01_discovery.ipynb`, sections 7 to 12, written by Samir; numbers re-checked against `case1.pcap` on 2026-11-10).
+- Result:
+  - **Correction:** `10.0.2.20` is the iodine server itself, not a resolver. All 424 tunnel answers carry iodine's fixed header (AA = 1, RD = 0, RA = 0, TTL 0), the client sends straight to that MAC address with IP TTL 64. The 2026-11-07 entry "Clients, resolvers and source ports" calls it a resolver: read it as "server".
+  - **Burst 2 is a byte for byte copy of burst 1** (same names, IDs, answers, login challenge; timing within 0.3 s). One distinct session of 222 queries: 173 pings, 24 data queries, 13 size probes, 12 handshake queries.
+  - The session carries one H.323 voice call (TCP 1720 set-up, RTP over UDP 5000, 169 GSM frames down, 2 up), about 19 KB in total, no sign of exfiltration.
+  - Tunnel against normal: 222 unique names under one domain against at most 35; data queries median 93.5 bytes (normal 20), entropy 5.75 against 2.52 bits per character, but over all tunnel queries entropy is 2.75 and the median name 19 bytes, so per-query rules miss the pings.
+- Next: slices 2 to 5 start from `docs/handoff-2026-11-10-1230.md`.
+
 ## 2026-11-07 12:39 CTI sources: first pass on iodine and DNS tunnelling
 - Looked at: three pages, read through a summarising fetch (not yet read in full by Rick).
   - MITRE ATT&CK T1572 Protocol Tunneling: https://attack.mitre.org/techniques/T1572/

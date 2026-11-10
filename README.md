@@ -16,14 +16,12 @@ Group final project: find the malicious traffic in a PCAP with a data science te
 | `data/raw/` | PCAP and `dns.log`. **Git-ignored**, download from Canvas |
 | `src/` | Python modules: feature extraction, detectors, evaluation |
 | `notebooks/` | Exploration and the notebook that goes into the submission |
-| `report/` | Early Quarto draft (`report.qmd`, `references.bib`, `template/`). **Not used any more**, the group writes the report in Overleaf |
-| `report/_template-original/` | The original LaTeX template from Canvas, kept as fallback |
 | `slides/` | Presentation (20 min plus 5 min questions) |
-| `docs/` | Working notes: case and technique choice, task division, investigation log |
+| `docs/` | Working notes: case and technique choice, task division, investigation log, the newest `handoff-*.md` |
 
 ## The report
 
-Written in **Overleaf** by the whole group (decided 2026-11-07). The Overleaf project can be opened in VS Code with the Overleaf Workshop extension. The Quarto draft in `report/` is kept only until the group confirms it can go.
+Written in **Overleaf** by the whole group (decided 2026-11-07). The Overleaf project can be opened in VS Code with the Overleaf Workshop extension. The report is not stored in this repo; the Quarto draft and the Canvas template that used to be in `report/` were removed on 2026-11-09.
 
 ## Python setup
 
